@@ -1,0 +1,165 @@
+.menu-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+    border: none;
+    padding: 0;
+    margin-left: auto;
+    fill: var(--logo-second-color);
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    /*  властивості переходу  */
+    transition-property: fill;
+    transition-duration: var(--transition-duration);
+    transition-timing-function: var(--transition-timing-function);
+    
+    &:hover,
+    &:focus {
+        fill: var(--brand-color-main);
+    }
+
+    @media screen and (min-width: 768px) {
+        display: none;
+    }
+}
+
+.menu-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding-top: 48px;
+    padding-bottom: 48px;
+    padding-left: 40px;
+    background-color: var(--background-color-modal);
+    display: flex;
+    flex-direction: column;
+    transform: translateX(100%);
+    /*  властивості переходу  */
+    transition-property: transform;
+    transition-duration: var(--transition-duration);
+    transition-timing-function: var(--transition-timing-function);
+
+    @media screen and (min-width: 768px) {
+        display: none;
+    }
+
+    &.is-open {
+        transform: translateX(0);
+    }
+}
+
+.menu-container__btn-close {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    padding: 0;
+
+    cursor: pointer;
+    border: none;
+    background-color: transparent;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.menu-container_icon-close {
+    fill: var(--often-text-color);
+    width: 40px;
+    height: 40px;
+    /*  властивості переходу  */
+    transition-property: fill;
+    transition-duration: var(--transition-duration);
+    transition-timing-function: var(--transition-timing-function);
+
+    &:hover,
+    .menu-container__btn-close:focus & {
+        fill: var(--brand-color-main);
+    }
+}
+
+.menu-container__list {
+    margin-bottom: auto;
+}
+
+.menu-container__item-menu {
+    &:not(:last-child) {
+        margin-bottom: 32px;
+    }
+}
+
+.menu-container__link {
+    font-size: 40px;
+    font-weight: 500;
+    line-height: calc(47 / 40);
+    letter-spacing: 0.02em;
+    color: var(--often-text-color);
+    /*  властивості переходу  */
+        transition-property: color;
+        transition-duration: var(--transition-duration);
+        transition-timing-function: var(--transition-timing-function);
+
+
+    &:hover,
+    &:focus,
+    &:active {
+        color: var(--brand-color-main);
+    }
+}
+
+.menu-container__link--current {
+color: var(--brand-color-main);
+}
+
+.menu-container__contact-list {
+    margin-bottom: 64px;
+}
+
+.menu-container__item-contact {
+    &:not(:last-child) {
+        margin-bottom: 32px;
+    }
+}
+
+.menu-container__tel-link {
+    color: var(--brand-color-main);
+    font-size: 34px;
+    font-weight: 500;
+    line-height: calc (40 / 32);
+    letter-spacing: 0.02em;
+}
+
+.menu-container__mail-link {
+    font-size: 24px;
+    font-weight: 500;
+    line-height: calc(28 / 24);
+    letter-spacing: 0.02em;
+    color: var(--second-text-color);
+}
+
+.menu-container__socials {
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 10px;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: calc(22 / 18);
+    letter-spacing: 0.02em;
+    color: var(--brand-color-main);
+}
+
+.menu-container__item-socials {
+    &:not(:last-child) {
+        margin-right: 10px;
+        padding-right: 10px;
+        border-right: 1px solid var(--brand-color-main);
+    }
+}
+
+
+

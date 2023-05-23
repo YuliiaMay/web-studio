@@ -1,0 +1,192 @@
+/* HEADER */
+.header {
+    border-bottom: 1px solid var(--border-color);
+}
+
+
+.header-conteiner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+}
+
+.nav__menu {
+    @media screen and (max-width: 768px) {
+        display: none;
+    }
+
+    @media screen and (min-width: 768px) {
+        display: flex;
+        gap: 50px;
+        margin-left: 87px;         
+    }
+
+    @media screen and (min-width: 1200px) {
+        margin-left: 93px;
+    }
+}
+
+.nav__item {
+    position: relative;
+    padding-top: 32px;
+    padding-bottom: 32px;
+}
+
+.nav__link {
+    @media screen and (min-width: 768px) {
+        font-size: 14px;
+        font-weight: 500;
+        line-height: calc(16 / 14);
+        letter-spacing: 0.02em;
+        /*  властивості переходу  */
+        transition-property: color;
+        transition-duration: var(--transition-duration);
+        transition-timing-function: var(--transition-timing-function);
+    }
+
+    &:hover,
+    &:focus,
+    &:active {
+        color: var(--brand-color-main);
+    }   
+}
+
+.nav__link--current {
+    color: var(--brand-color-main);
+
+    &::after {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 4px;
+        bottom: -2%;
+        left: 0;
+        border-radius: 4px;
+        transform: scaleX(100%);
+        display: block;
+        background-color: var(--brand-color-main);
+    }
+}
+
+
+.header__group {
+    @media screen and (max-width: 768px) {
+        display: none;
+    }
+        
+    @media screen and (min-width: 768px) {
+        display: flex;
+    }
+    
+    @media screen and (min-width: 1200px) {
+        display: flex;
+    }
+}
+
+.header__contacts {
+
+    @media screen and (min-width: 768px) {
+            display: flex;
+            flex-direction: column;
+            margin-right: 0;
+        }
+    
+        @media screen and (min-width: 1200px) {
+            display: flex;
+            flex-direction: row;
+        }
+    
+    // @media screen and (min-width: 1200px) {
+    //     flex-direction: row;
+    //     // gap: 30px;
+    // }
+//     @media screen and (min-width: 768px) {
+        // display: flex;
+        // flex-direction: column;
+        // gap: 10px;        
+//     }
+
+    
+}
+
+.header__item {  
+    @media screen and (min-width: 768px) {
+        &:first-child {
+            margin-bottom: 10px;
+        }
+    }
+
+    @media screen and (min-width: 1200px) {
+        &:first-child {
+            margin-right: 30px;
+        }
+    }
+}
+
+.header__link {
+    @media screen and (min-width: 768px) {
+        display: flex;
+        align-items: center;
+        font-weight: 500;
+        font-size: 12px;
+        line-height: (14 / 12);
+        letter-spacing: 0.02em;
+        color: var(--second-text-color);
+        /*  властивості переходу  */
+        transition-property: color;
+        transition-duration: var(--transition-duration);
+        transition-timing-function: var(--transition-timing-function);
+    }
+    
+    @media screen and (min-width: 1200px) {
+        padding-top: 32px;
+        padding-bottom: 32px;
+        font-size: 14px;
+        line-height: calc (16 / 14);
+    }
+    
+    &:hover,
+    &:focus,
+    &:active {
+        color: var(--brand-color-main);
+    }   
+}
+
+// .mail {
+//     @media screen and (max-width: 1199px) {
+//         padding-top: 21px;
+//         padding-bottom: 5px;
+//     } 
+// }
+
+// .tel {
+//     @media screen and (max-width: 1199px) {
+//     padding-top: 5px;
+//     padding-bottom: 21px;
+//     }
+// }
+
+.header__icon {
+    .header__item:hover &,
+    .header__link:focus & {
+        fill: var(--brand-color-main);
+    }
+
+    @media screen and (min-width: 768px) {
+        fill: var(--second-text-color);
+        margin-right: 8px;
+        /*  властивості переходу  */
+        transition-property: fill;
+        transition-duration: var(--transition-duration);
+        transition-timing-function: var(--transition-timing-function);
+    }
+
+    @media screen and (min-width: 1200px) {
+        margin-right: 10px;
+    }
+}

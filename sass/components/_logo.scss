@@ -1,0 +1,45 @@
+/* logo */
+.logo {
+    font-family: var(--logo-font);
+    font-size: 24px;
+    font-weight: 700;
+    line-height: calc(28 / 24);
+    letter-spacing: 0.03em;
+    color: var(--brand-color-main);
+
+    .nav & {
+        padding-top: 16px;
+        padding-bottom: 16px;
+    }
+
+    // .footer__group & {
+    //     margin-bottom: 20px;
+    // }
+
+    @media screen and (min-width: 768px) {
+    
+        .nav & {
+            padding-top: 26px;
+            padding-bottom: 26px;
+        }
+    }
+
+    @media screen and (min-width: 1200px) {
+        font-size: 26px;
+        line-height: calc(31 / 26);
+
+        .nav & {
+            padding-top: 24px;
+            padding-bottom: 25x;
+        }
+    }
+}
+
+.logo__dark {
+    color: var(--logo-second-color);
+}
+
+.logo__light {
+    color: var(--light-text-color);
+}
+

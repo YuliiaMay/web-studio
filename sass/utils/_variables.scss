@@ -1,0 +1,29 @@
+:root {
+    --brand-color-main: #2196f3;
+    --logo-second-color: #000000;
+    --often-text-color: #212121;
+    --second-text-color: #757575;
+    --light-text-color: #ffffff;
+    --second-text-light-color: #f5f4fa;
+    --socials-icon-color: #afb1b8;
+
+    /*background-color*/
+    --background-color-dark: #2f303a;
+    --background-color-light: #f5f4fa;
+    --background-color-modal: #ffffff;
+    --background-dark-trans: rgba(255, 255, 255, 0.1);
+
+    /*border*/
+    --border-color: #eeeeee;
+    --line-color: #ececec;
+
+    /*font*/
+    --text-main-font: Roboto, sans-serif;
+    --logo-font: Raleway, sans-serif;
+
+    /*переходи*/
+    --transition-duration: 250ms;
+    --transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+

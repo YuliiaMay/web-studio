@@ -1,0 +1,21 @@
+// utiles styles
+@import "./utils/variables";
+@import "./utils/visually-hidden";
+@import "./utils/_decimals";
+
+// base-reset styles
+@import "./base/reset";
+
+// components styles
+@import "./components/conteiner";
+@import "./components/header";
+@import "./components/mobile-menu";
+@import "./components/logo";
+@import "./components/studio-main";
+@import "./components/card";
+@import "./components/team-card";
+@import "./components/socials";
+@import "./components/footer";
+@import "./components/modal";
+@import "./components/portfolio-main";
+@import "./components/portfolio-card";
